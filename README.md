@@ -27,12 +27,21 @@ To contribute, please check out our contribution guide [here](Contribute.md).
 ## How to Contribute
 
 - Fork the Repository
+
 - Clone the Forked repository
-  ''' git clone https://github.com/<USER_NAME>/<REPO_NAME>'''
+
+##### ` git clone https://github.com/<USER_NAME>/<REPO_NAME>`
+
 - Add Scripts and necessary changes
-  ''' git add .'''
+
+##### ` git add .`
+
 - Commit the changes
-  ''' git commit -m "MESSAGE" '''
+
+##### `git commit -m "MESSAGE"`
+
 - Push to your branch
-  ''' git push '''
+
+##### `git push`
+
 - Raise a Pull Request to the parent Repository
