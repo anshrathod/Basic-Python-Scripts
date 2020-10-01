@@ -18,11 +18,12 @@ To contribute, please check out our contribution guide [here](Contribute.md).
 
 - [Linear Search](LinearSearch.py)
 - [Binary Search](binarySearch.py)
-- [Conpund](basic%20python%20scripts/compund.py)
-- [Operators](basic%20python%20scripts/operators.py)
-- [Perfect number](basic%20python%20scripts/perfectno.py)
-- [Power of a number](basic%20python%20scripts/ppower.py)
-- [Sum of Digits](basic%20python%20scripts/sumofdigits.py)
+- Basic Python Scripts
+  - [Conpund](basic%20python%20scripts/compund.py)
+  - [Operators](basic%20python%20scripts/operators.py)
+  - [Perfect number](basic%20python%20scripts/perfectno.py)
+  - [Power of a number](basic%20python%20scripts/ppower.py)
+  - [Sum of Digits](basic%20python%20scripts/sumofdigits.py)
 
 ## How to Contribute
 
