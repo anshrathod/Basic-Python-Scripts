@@ -1,7 +1,7 @@
 """
 Author: Jaqsparow
 Purpose: Script to keep your system alive. It takes one argument i.e number of minutes system is to be active 
-         and action to be taken after  that no of minutes
+         and action to be taken after  that no of minutes.
 Usage: keep_your_system_alive.py -t COUNT -a s|r
 example to keep a system active for 30 minutes: keep_your_system_alive.py -t 30
 example to keep a system active for 1 hour and then turn off the PC: keep_your_system_alive.py -t 60 -a s
