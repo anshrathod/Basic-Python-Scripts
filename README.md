@@ -23,12 +23,6 @@ To contribute, please check out our contribution guide [here](Contribute.md).
   - [Operators](basic%20python%20scripts/operators.py)
   - [Perfect Number](basic%20python%20scripts/perfectno.py)
   - [Power of a Number](basic%20python%20scripts/ppower.py)
-  - [Sum of Digits](basic%20python%20scripts/sumofdigits.py)
-  - [Conpund](basic%20python%20scripts/compund.py)
-  - [Operators](basic%20python%20scripts/operators.py)
-  - [Perfect number](basic%20python%20scripts/perfectno.py)
-  - [Power of a number](basic%20python%20scripts/ppower.py)
-  - [Sum of Digits](basic%20python%20scripts/sumofdigits.py)
 
 ## How to Contribute
 
