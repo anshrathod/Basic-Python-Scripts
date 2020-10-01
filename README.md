@@ -18,7 +18,7 @@ To contribute, please check out our contribution guide [here](Contribute.md).
 
 - [Linear Search](LinearSearch.py)
 - [Binary Search](binarySearch.py)
-- Basic Python Scripts
+- **Basic Python Scripts
   - [Conpund](basic%20python%20scripts/compund.py)
   - [Operators](basic%20python%20scripts/operators.py)
   - [Perfect number](basic%20python%20scripts/perfectno.py)
