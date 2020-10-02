@@ -1,0 +1,166 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Oct  2 14:09:07 2020
+
+@author: anjalisingh
+"""
+# ImDb Scarpping 2019
+import json
+import pandas as pd
+from datetime import date
+from datetime import datetime
+from bs4 import BeautifulSoup
+from tqdm import tqdm_notebook as tqdm
+from urllib.request import urlopen, Request
+from pprint import pprint
+import numpy as np
+import re
+
+webpage = 'https://www.imdb.com/list/ls043923715/'
+
+hdr = {'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.64 Safari/537.11',
+       'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+       'Accept-Charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+       'Accept-Encoding': 'none',
+       'Accept-Language': 'en-US,en;q=0.8',
+       'Connection': 'keep-alive'}
+
+def extract_soup_object(link):
+  request=Request(link, headers=hdr)
+  html = urlopen(request).read().decode()
+  soup = BeautifulSoup(html, 'html.parser')
+  return soup
+
+def extract_links(page):
+  soup=extract_soup_object(page)
+  data=soup.find_all('h3',{'class':"lister-item-header"})
+  return ['https://www.imdb.com'+item.a.get('href') for item in data]
+
+movie_links=extract_links(webpage)
+length = len(movie_links)
+print(movie_links[0])
+
+soup = extract_soup_object(webpage)
+print(soup)
+
+temp = soup.find_all('h3',{'class': "lister-item-header"})
+print(temp)
+
+def movieName(link):
+  s1 = extract_soup_object(link)
+  movie_name = s1.find('div',{'class':"title_wrapper"}).find('h1').text.replace('\xa0(2020) ','')
+  return movie_name
+
+print(movieName(movie_links[0]))
+
+def rating(link):
+  s1 = extract_soup_object(link)
+  rate = s1.find('div', {'class':"ratings_wrapper"}).text.replace('\n','').split(' ')
+  return rate[0]
+
+print(rating(movie_links[0]))
+
+def movie_basic_info(link):
+  try:
+    s1 = extract_soup_object(link)
+    temp=s1.find('div',{'class':'title_wrapper'}).find('div',{'class': 'subtext'}).text.replace(' ','').split('|')
+    certification=temp[0].split('\n')[1]
+    if re.search(certification,'min'):
+      certification = None
+      time=temp[0].split('\n')[2]
+      genre=temp[1].replace('\n','')
+      release_date=temp[2].split('\n')[1].split('(')[0]
+    else:
+      time=temp[1].split('\n')[1]
+      genre=temp[2].replace('\n','')
+      release_date=temp[3].split('\n')[1].split('(')[0]
+    return certification, time, genre, release_date
+  except IndexError:
+    return None, None, None, None
+
+print(movie_basic_info(movie_links[15]))
+
+def summary(link):
+  s1 = extract_soup_object(link)
+  s = s1.find('div', {'class': "summary_text"}).text.replace('\n','').replace(' ','')
+  return s
+
+print(summary(movie_links[0]))
+
+def team(link):
+  try:
+    s1 = extract_soup_object(link)
+    credits = s1.find_all('div', {'class': "credit_summary_item"})
+    temp = [item.text for item in credits]
+    director = temp[0].split(':')[1]
+    writers = temp[1].split(':')[1].replace('(story)','').replace('            |\n3 more credits\xa0»\n    ','')
+    actors = temp[2].split(':')[1].replace('|\nSee full cast & crew\xa0»\n    ','')
+    return director, writers, actors
+  except IndexError:
+    return None, None, None
+
+print(team(movie_links[20]))
+
+def primary_image(link):
+  s1 = extract_soup_object(link)
+  return s1.find('div',{'class':'poster'}).find('img')['src']
+
+print(primary_image(movie_links[0]))
+
+def data(link):
+  data={}
+  data['website']='IMDB'
+  data['link']=link
+  name=link.split('/')[4]
+  data['unique_id']=name
+  try:
+    data['movie_name'] = movieName(link)
+  except:
+    data['movie_name'] = None
+  try:
+    data['movie_rating'] = rating(link)
+  except:
+    data['movie_rating'] = None
+  Certification, Time, Genre, Date_release = movie_basic_info(link)
+  try:
+    data['Certification'] = Certification
+  except:
+    data['Certification'] = None
+  try:
+    data['Duration'] = Time
+  except:
+    data['Duration'] = None
+  try:
+    data['Genre'] = Genre
+  except:
+    data['Genre'] = None
+  try:
+    data['Date_release'] = Date_release
+  except:
+    data['Date_release'] = None
+
+  data['summary'] = summary(link)
+
+  Directors, Writers, Actors = team(link)
+  try:
+    data['Director'] = Directors
+  except:
+    data['Director'] = None
+
+  try:
+    data['Writers'] = Writers
+  except:
+    data['Writers'] = None
+
+  try:
+    data['Actors'] = Actors
+  except:
+    data['Actors'] = None
+
+
+
+  return data
+
+for i in range(0, 71):
+  print(data(movie_links[i]))
