@@ -1,6 +1,7 @@
 import datetime
 start = datetime.datetime.now()
 arr = [5, 8, 1, 3, 3, 0, 7, 4,5,8, 9, 10, 84, 34, 22]
+print(type(arr))
 arr_size = len(arr)
 new_arr = [None]*(arr_size)
 n = 0
