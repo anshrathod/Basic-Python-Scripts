@@ -1,0 +1,18 @@
+# Switcher for implementing switch case options
+def get_number(ID):
+    # Prepare Cases
+    switcher = {
+        1: "One",
+        2: "Two",  
+        3: "Three",
+    }
+
+    '''Return first Matched argument Value 
+       if no match found defaults to return No Matching case'''
+    return switcher.get(ID, "No Matching Case")
+
+# Get input from the user
+NUMBER = int(input("Enter a Number between 1 and 3: "))
+
+# Print the output
+print(get_number(NUMBER))
