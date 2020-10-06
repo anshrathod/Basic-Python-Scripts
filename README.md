@@ -23,6 +23,9 @@ To contribute, please check out our contribution guide [here](Contribute.md).
   - [Operators](basic%20python%20scripts/operators.py)
   - [Perfect Number](basic%20python%20scripts/perfectno.py)
   - [Power of a Number](basic%20python%20scripts/ppower.py)
+  - [FizzBuzz](basic%20python%20scripts/fizzbuzz.py)
+  - [Python switch case implementation](basic%20python%20scripts/switch_case.py)
+  - [Find Missing Number](basic%20python%20scripts/find_missing_number.py)
 
 ## How to Contribute
 

@@ -7,9 +7,9 @@ def get_number(ID):
         3: "Three",
     }
 
-    '''Return first Matched argument Value 
-       if no match found defaults to return No Matching case'''
-    return switcher.get(ID, "No Matching Case")
+    """Return first Matched argument Value 
+       if no match then returns No Match case statement."""
+    return switcher.get(ID, "No Match Case")
 
 # Get input from the user
 NUMBER = int(input("Enter a Number between 1 and 3: "))

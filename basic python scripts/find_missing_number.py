@@ -1,4 +1,4 @@
-""" Find the missing number from a given List
+""" Find the missing number from a given List.
     Explanation:
         INPUT: [1,2,3,4,5,7,9,10]
         Output: [6,8]
