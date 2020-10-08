@@ -1,7 +1,7 @@
 # Basic-Python-Scripts
 
 Created For HacktoberFest.
-Awesome Resources Awesome
+Awesome Resources
 
 😎 List of helpful basic python scripts added by the community for the community!
 
