@@ -8,6 +8,7 @@ URL = 'https://boardgamegeek.com/browse/boardgame'
 Game = namedtuple('game', 'name, bgg_rating, year')
 
 
+
 def get_bgg_page():
     page = requests.get(URL)
     page.raise_for_status()
@@ -42,3 +43,4 @@ def print_top50_boardgames_from_boardgamegeek(content_bgg):
 
 if __name__ == '__main__':
     print_top50_boardgames_from_boardgamegeek(get_bgg_page())
+
