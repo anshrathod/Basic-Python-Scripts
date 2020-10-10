@@ -1,4 +1,4 @@
-# Web Scarping
+# Web Scraping
 
 Any number of people can work in a single issue,
 This issue is open for all.
