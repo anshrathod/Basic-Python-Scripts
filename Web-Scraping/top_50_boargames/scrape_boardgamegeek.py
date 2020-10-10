@@ -8,11 +8,18 @@ URL = 'https://boardgamegeek.com/browse/boardgame'
 Game = namedtuple('game', 'name, bgg_rating, year')
 
 
-def print_top50_boardgames_from_boardgamegeek() -> List[namedtuple]:
-    """Print list of 50 games from boardgamegeek"""
+
+def get_bgg_page():
     page = requests.get(URL)
     page.raise_for_status()
-    content_bgg = page.content
+    return page.text
+
+# with open('boardgamegeek.html', 'w') as file:
+#     file.write(get_bgg_page())
+
+
+def print_top50_boardgames_from_boardgamegeek(content_bgg):
+    """Print list of 50 games from boardgamegeek"""
 
     soup = BeautifulSoup(content_bgg, 'html.parser')
     collection = soup.find('div', id='maincontent')
@@ -31,9 +38,9 @@ def print_top50_boardgames_from_boardgamegeek() -> List[namedtuple]:
                 year=int(name_year[1][1:-1]),
                 bgg_rating=float(rating))
         )
-
     pprint.pprint(list_of_games)
 
 
 if __name__ == '__main__':
-    print_top50_boardgames_from_boardgamegeek()
+    print_top50_boardgames_from_boardgamegeek(get_bgg_page())
+
