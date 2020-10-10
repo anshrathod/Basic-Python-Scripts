@@ -18,6 +18,7 @@ To contribute, please check out our contribution guide [here](Contribute.md).
 
 - [Linear Search](LinearSearch.py)
 - [Binary Search](binarySearch.py)
+- [Merge Sort](MergeSort.py)
 - **Basic Python Scripts**
   - [Compund](basic%20python%20scripts/compund.py)
   - [Operators](basic%20python%20scripts/operators.py)
