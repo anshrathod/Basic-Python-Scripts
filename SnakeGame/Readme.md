@@ -4,3 +4,11 @@ This issue is open for all.
 
 Project location 👉🏻 SnakeGame/
 👨🏻‍💻 Happy Coding 👩🏻‍💻
+
+
+# Run the following commands to play the game
+
+```
+pip install tkinter
+python snake.py
+```
