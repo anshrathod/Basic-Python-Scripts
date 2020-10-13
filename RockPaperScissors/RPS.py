@@ -1,64 +1,53 @@
 #author: GhostUser
+#impost random module
+import random
+
+#game rule
+print("Game rule:\n\tRock vs Paper => Paper Win \n\tPaper vs Scissor => Scissor Win \n\tRock vs Scissor => Rock Win")
+
+#For play again
+while True:  
+    print("\nChoices are: \n\t1.Rock \n\t2.paper \n\t3.Scissor")
+
+    #Computer choice    
+    print("\nComputer's turn")
+    print("----------------------")
+    print("Computer has done secretly. Obviously You're not able to see it now")
+    computer_choice = random.randint(1,3)
+    if computer_choice == 1:
+        computer_choice_name = "Rock"
+    elif computer_choice == 2:
+        computer_choice_name = "Paper"
+    elif computer_choice == 3:
+        computer_choice_name = "Scissor"
+
+    # Print user choice
+    print("\nYour turn")
+    print("--------------")
+    user_choice = int(input("Enter your choice: "))
+    while user_choice > 3 or user_choice < 1: 
+        user_choice = int(input("enter valid input: ")) 
+    if user_choice == 1:
+        user_choice_name = "Rock"
+    elif user_choice == 2:
+        user_choice_name = "Paper"
+    else:
+        user_choice_name = "Scissor"
 
 
-import random,sys
-print('Rock, Paper,Scissor')
-wins = 0 
-losses = 0
-ties = 0
+    print("\n" + computer_choice_name + " vs " + user_choice_name)
 
-while True: # The main game loop.   
-  print('%s Wins, %s Losses, %s Ties' % (wins, losses, ties))  
-  while True: # The player input loop.      
-    print('Enter your move: (r)ock (p)aper (s)cissors or (q)uit')       
-    playerMove = input()        
-    if playerMove == 'q':          
-      sys.exit() # Quit the program.       
-    if playerMove == 'r' or playerMove == 'p' or playerMove == 's': 
-      break # Break out of the player input loop.       
-    print('Type one of r, p, s, or q.')
-           
- # Display what the player chose:   
-  if playerMove == 'r':     
-         print('ROCK versus...')  
-  elif playerMove == 'p':       
-         print('PAPER versus...')   
-  elif playerMove == 's':     
-         print('SCISSORS versus...')
-         
-  # Display what the computer chose:   
-  randomNumber = random.randrange(1, 3)
-  if randomNumber == 1:    
-    computerMove = 'r'       
-    print('ROCK')    
-  elif randomNumber == 2:     
-    computerMove = 'p'      
-    print('PAPER')    
-  elif randomNumber == 3:    
-    computerMove = 's'      
-    print('SCISSORS')
+    if computer_choice_name == user_choice_name:
+        print("\nDraw")
+    elif ((computer_choice_name == 1 and user_choice_name == 2) or (computer_choice_name == 2 and user_choice_name == 3) or (computer_choice_name == 3 and user_choice_name == 1)):
+        print(user_choice_name + " wins. You Win")
+    else:
+        print(computer_choice_name + " wins. Computer win")
 
- # Display and record the win/loss/tie:  
-  if playerMove == computerMove:      
-    print('It is a tie!')       
-    ties = ties + 1    
-  elif playerMove == 'r' and computerMove == 's':       
-     print('You win!')      
-     wins = wins + 1
-  elif playerMove == 'p' and computerMove == 'r':  
-     print('You win!')       
-     wins = wins + 1  
-  elif playerMove == 's' and computerMove == 'p':  
-     print('You win!')     
-     wins = wins + 1   
-  elif playerMove == 'r' and computerMove == 'p':   
-      print('You lose!')       
-      losses = losses + 1  
-  elif playerMove == 'p' and computerMove == 's': 
-      print('You lose!')      
-      losses = losses + 1   
-  elif playerMove == 's' and computerMove == 'r':  
-     print('You lose!')      
-     losses = losses + 1
-    
-    
+        print("\nDo you want to continue (Y/N)")
+        answer=input()
+
+        if (answer == "N" or answer == "n"):
+            break
+
+print("Thanks for playing")
