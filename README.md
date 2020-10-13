@@ -12,7 +12,7 @@ To contribute please Submit Valid Pull Requests which satisfies the issues raise
 
 ## Contribution
 
-To contribute, please check out our contribution guide [here](Contribute.md).
+To contribute, please check out our contribution guide [here](CONTRIBUTING.md).
 
 ## Content
 
