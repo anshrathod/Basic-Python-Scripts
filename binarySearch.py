@@ -12,4 +12,5 @@ def binSearch(A, v):
                 hi = mid-1
     return -1
 
-binSearch([1,2,3,5,6,9,12],6)
+
+binSearch([1, 2, 3, 5, 6, 9, 12], 6)
