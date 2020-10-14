@@ -16,10 +16,16 @@ To contribute, please check out our contribution guide [here](CONTRIBUTING.md).
 
 ## Content
 
-- [Linear Search](LinearSearch.py)
-- [Binary Search](binarySearch.py)
-- [Merge Sort](MergeSort.py)
-- **Basic Python Scripts**
+**Sorting Algorithms**
+  - [Linear Search](LinearSearch.py)
+  - [Binary Search](binarySearch.py)
+  - [Merge Sort](MergeSort.py)
+  - [Quick Sort](quickSort.py)
+  - [Radix Sort](RadixSort.py)
+  - [Sorting](sorting.py)
+  - [Binary Search](binarySearch.py)
+
+**Basic Python Scripts**
   - [Compund](basic%20python%20scripts/compund.py)
   - [Operators](basic%20python%20scripts/operators.py)
   - [Perfect Number](basic%20python%20scripts/perfectno.py)
@@ -27,6 +33,22 @@ To contribute, please check out our contribution guide [here](CONTRIBUTING.md).
   - [FizzBuzz](basic%20python%20scripts/fizzbuzz.py)
   - [Python switch case implementation](basic%20python%20scripts/switch_case.py)
   - [Find Missing Number](basic%20python%20scripts/find_missing_number.py)
+  - [Send Alerts](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Send%20Alerts)
+  - [Basic Calculator](simple_calculator.py)
+  - [Right Triangle](RightTriangle.py)
+  - [Armstrong Number](Maitreyi88_armstrongno.py)
+  - [Fibonacci](Maitreyi88_fibonacci.py)
+  - [Palindrome](Maitreyi88_palindrome.py)
+  - [Prime Number](Maitreyi88_primeno.py)
+
+**Games**
+  - [Snake Game](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/SnakeGame)
+  - [Rock Paper Scissors](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/RockPaperScissors)
+  - [Rock Paper Scissors Using Text To Speech](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/RockPaperScissorUsingTextToSpeech)
+  - [Android Soduku Solver](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Android%20sudoku%20solver)
+  - [Guess The Number](Guess_the_number.py)
+  - [Pacman Game](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/Pacman%20Game%20(GUI))
+  
 
 ## How to Contribute
 
