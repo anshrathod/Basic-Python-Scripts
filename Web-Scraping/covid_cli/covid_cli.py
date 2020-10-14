@@ -13,9 +13,38 @@ from bs4 import BeautifulSoup
 
 URL = "https://www.worldometers.info/coronavirus/"
 
+# For coloring output
+RED_COLOR = "\033[1;31m"
+GREEN_COLOR = "\033[1;32m"
+NO_COLOR = "\033[0m"
+
 def main():
     """The main function of the script."""
-    pass
+    
+    result = send_request(URL)
+
+    if result == -1:
+        print(f"[{RED_COLOR}-{NO_COLOR}] Connection error...")
+        sys.exit(1)
+
+    info_dict = parse_result(result)
+
+    if "err" in info_dict:
+        print(f"[{RED_COLOR}-{NO_COLOR}] Web scraping error...")
+        sys.exit(1)
+
+    print(f"========= {RED_COLOR}Covid-19 Info{NO_COLOR} =========\n")
+
+    print(f" Coronavirus cases => {info_dict['cases']}")
+    print(f" Death => {RED_COLOR}{info_dict['death']}{NO_COLOR}")
+    print(f" Recovered => {GREEN_COLOR}{info_dict['recovered']}{NO_COLOR}\n")
+
+    print("========= Top Ten Countries =========\n")
+
+    for country in info_dict["top_ten_countries"]:
+        print(f" #{info_dict['top_ten_countries'].index(country) + 1}: {country}")
+
+    print("\n========= Hands | Face | Space =========")
 
 def send_request(url):
     """
