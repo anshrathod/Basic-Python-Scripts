@@ -32,10 +32,40 @@ def send_request(url):
 def parse_result(result):
     """
     Parses the HTML result,
-    and returns the info.
+    and returns the info as a dictionary (returns {"err": some_err} for any error).
     - result: The HTML result (send_request function returns).   
     """
-    pass
+    
+    # Coronavirus cases => <span style="color:#aaa">38,406,711</span>
+    # Death => <span>1,091,593</span>
+    # Recovered => <span>28,875,950</span>
+
+    soup = BeautifulSoup(result.text, "html.parser")
+    span_tags = soup.find_all("span")
+    a_tags = soup.find_all("a", {"class": "mt_a"})
+    # span_tags: index 4 => Coronavirus cases | index 5 => Death | index 6 => Recovered
+    # a_tags: top ten [0...9]
+
+    info = {
+        "cases": "",
+        "death": "",
+        "recovered": "",
+        "top_ten_countries": []
+    }
+
+    try:
+        
+        info["cases"] = span_tags[4].text
+        info["death"] = span_tags[5].text
+        info["recovered"] = span_tags[6].text
+
+        for country in a_tags[:9]:
+            info["top_ten_countries"].append(country.text)
+
+        return info
+
+    except Exception as err:
+        return {"err": str(err)}
 
 if __name__ == '__main__':
     main()
