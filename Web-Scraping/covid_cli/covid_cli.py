@@ -11,6 +11,8 @@ import sys
 import requests
 from bs4 import BeautifulSoup
 
+URL = "https://www.worldometers.info/coronavirus/"
+
 def main():
     """The main function of the script."""
     pass
@@ -18,10 +20,14 @@ def main():
 def send_request(url):
     """
     Sends a GET request to the URL,
-    and returns the result.
+    and returns the result (returns -1 for any error).
     - url: The website URL.
     """
-    pass
+
+    try:
+        return requests.get(url)
+    except:
+        return -1
 
 def parse_result(result):
     """
