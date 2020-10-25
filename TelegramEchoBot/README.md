@@ -1,5 +1,5 @@
 # TelegramEchoBot
-TelegramEchoBot is a simple python script which echo the messages got from user on telegram without any Library and Framework.
+TelegramEchoBot is a simple python script which echo the messages got from the user on telegram without any Library and Framework.
 
 ## Installation
 Pre-requirements:
