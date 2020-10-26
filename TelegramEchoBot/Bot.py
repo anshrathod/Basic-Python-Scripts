@@ -12,7 +12,7 @@ try:
         if update_id != previous_update_id:
             user = message['result'][-1]['message']['from']['id']
             replay_message = message['result'][-1]['message']['text']
-            requests.get(f'https://api.telegram.org/bot1048984953:AAGbOkNqYYdGN5jpSoLTy5fTjPcrQWFNsN4/sendMessage?chat_id={user}&text={replay_message}')
+            requests.get(f'https://api.telegram.org/bot{bot_API}/sendMessage?chat_id={user}&text={replay_message}')
             previous_update_id = update_id
 except:
     print("Somthing Wrong......!!!!!!!!")
