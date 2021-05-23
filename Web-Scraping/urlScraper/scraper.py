@@ -10,7 +10,7 @@ def Scrape(site):
     # getting the request from url
     r = requests.get(site)
 
-    # converting the text
+    # converting text
 
     s = BeautifulSoup(r.text,"html.parser")
     for i in s.find_all("a"):
