@@ -4,18 +4,6 @@ Updated 10/3/2021
 """
 
 import mysql.connector
-# import string
-# import re
-# from fuzzywuzzy import fuzz, process
-# from selenium import webdriver
-# from selenium.common.exceptions import TimeoutException
-# from selenium.webdriver.chrome.options import Options
-# from json import loads
-# import pandas_market_calendars as mcal
-# import requests
-# from bs4 import BeautifulSoup
-# import pytz
-# import schedule
 
 
 def connect_to_db(host, user, password, database, port):
@@ -37,7 +25,7 @@ def reconnect_to_db(conn, cursor, attempts=10, delay=1):
         conn.reconnect(attempts=attempts, delay=delay)
         return conn, conn.cursor()
     else:
-        return cnx, cursor
+        return conn, cursor
 
 
 def get_column_names(cursor, table_name):
@@ -63,7 +51,6 @@ def get_db_table_data(cursor, table_name, fields, where='true'):
 
 def dicts_to_insert_query(dicts, table_name: str, query_lang=1):
     """
-
     :param dicts: list of dicts, all dicts must have the same keys (column names)
     :param table_name:
     :param query_lang:
