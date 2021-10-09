@@ -1,32 +1,26 @@
-#python program - make simple calculator
+#Simple Calculator
 
-print("1. adiition")
-print("2. subtraction")
-print("3. multiplication")
-print("4. division")
-print("5. exit")
-choice = int(input("enter your choice: "))
-if (choice>=1 and choice<=4):
-    print("enter two numbers: ")
-    num1 = int(input())
-    num2 = int(input())
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+print("For Exit, press any integer >4 or <1")
+choice = int(input("Enter Choice "))
+if choice in [1,2,3,4] :
+    num1 = int(input("First Number : "))
+    num2 = int(input("Second Number : "))
     if choice ==1:
         res = num1 + num2
-        print("result = ", res)
+        print("Sum: ", res)
     elif choice == 2:
             res = num1 - num2
-            print("result=",res)
+            print("Difference:",res)
     elif choice==3:
             res=num1*num2
-            print("result=",res)
+            print("Product:",res)
     else:
-        res=num1/num2
-        print("result=",res)
-elif choice==5:
-    exit()
-else:
-    print("wrong input..!!")
-            
-            
-    
-             
+        if num2==0:
+            print("Division by Zero Error")
+        else:
+            res=num1//num2
+            print("Quotient:",res)
