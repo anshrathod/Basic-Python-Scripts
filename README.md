@@ -41,6 +41,7 @@ To contribute, please check out our contribution guide [here](CONTRIBUTING.md).
   - [Fibonacci](Maitreyi88_fibonacci.py)
   - [Palindrome](Maitreyi88_palindrome.py)
   - [Prime Number](Maitreyi88_primeno.py)
+  - [Finding area of a Triangle](Find_area _of_triangle.py)
   - [Execution Time Utility](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Execution-time-utility)
   - [Instagram Bot](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/InstaGramBot)
   - [Python Telegram Bot](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Python-Telegram-bot)
