@@ -1,25 +1,25 @@
 import math
 print("What type to Calculation you want to do: 1. Basic Arithmetic\n\t\t\t\t\t\t\t\t\t\t 2. Trigonometric\n\t\t\t\t\t\t\t\t\t\t 3. Exit -->")
-n = int(input())
+n = int(input("Enter a number:"))
 if n == 1:
     print("Select one: 1. Sum\n\t\t\t2. Difference\n\t\t\t3. Multiplication\n\t\t\t4. Division\n\t\t\t5. Exit -->")
     n1 = int(input())
     if n1 == 1:
         number_1 = int(input("Enter the number 1: "))
         number_2 = int(input("Enter the number 2: "))
-        print("The Sum of Numbers: ",number_1 + number_2)
+        print("The Sum of Two Numbers: ",number_1 + number_2)
     elif n1 == 2:
         number_1 = int(input("Enter the number 1: "))
         number_2 = int(input("Enter the number 2: "))
-        print("The Diffference of Numbers: ", number_1 - number_2)
+        print("The Diffference of Two Numbers: ", number_1 - number_2)
     elif n1 == 3:
         number_1 = int(input("Enter the number 1: "))
         number_2 = int(input("Enter the number 2: "))
-        print("The Multiplication of Numbers: ", number_1 * number_2)
+        print("The Multiplication of Two Numbers: ", number_1 * number_2)
     elif n1 == 4:
         number_1 = int(input("Enter the number 1: "))
         number_2 = int(input("Enter the number 2: "))
-        print("The Division of Numbers: ", number_1 / number_2)
+        print("The Division of Two Numbers: ", number_1 / number_2)
     elif n1 == 5:
         print("Thanks for using",exit())
 elif n == 2:
