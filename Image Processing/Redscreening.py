@@ -1,8 +1,11 @@
-from simpleimage import SimpleImage # simpleimage library have to be installed (if not working properly just get the source code from github) from here
+from simpleimage import SimpleImage # simpleimage library have to be installed (if not working properly just get the source code from github)
+#already calculated value
 INTENSITY_THRESHOLD = 1.6
 
 #This code fills the 'red color' in 'filename1' file to the 'parts' in 'filename2' file
+
 #Note:'filename1' file should contain the image with red colored parts 
+
 def redscreen(filename1, filename2):
     Image = SimpleImage(filename1)
     back = SimpleImage(filename2)
