@@ -1,6 +1,11 @@
 
+#if the simpleimage library shows module not found error please copy source code from github
 
 from simpleimage import SimpleImage
+
+#This program outputs 'original_image','darker version','red version',' grascale verion' of the image
+
+#function for darker version of the image
 
 def darker(image):
     """
@@ -13,14 +18,23 @@ def darker(image):
         pixel.red = pixel.red // 2
         pixel.green = pixel.green // 2
         pixel.blue = pixel.blue // 2
+ 
+# function for red version of the image
+
 def red_channel(filename):
     image=SimpleImage(filename)
     for pixel in image:
         pixel.green=0
         pixel.blue=0
     return image
+
+#calculate luminousity 
+
 def compute_luminousity(red,green,blue):
     return(0.299*red)+(0.587*green)+(0.114*blue)
+
+#function for grayscale version of the image
+
 def grayscale(filename):
     image=SimpleImage(filename)
     for pixel in image:
@@ -29,6 +43,9 @@ def grayscale(filename):
         pixel.green=luminousity
         pixel.blue=luminousity
     return image
+
+#main function
+
 def main():
     image = SimpleImage('flower.jpg')
     image.show()
@@ -40,4 +57,5 @@ def main():
     gray_scale.show()
 
 
-main()
+if __name__ == '__main__':
+    main()
