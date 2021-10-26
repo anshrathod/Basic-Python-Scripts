@@ -1,0 +1,25 @@
+from collections import Counter
+ 
+# function which returns
+# most frequent word
+def mostFrequentWord(words):
+   
+    # Taking empty list
+    lis = []
+    for i in words:
+       
+        # Getting all words
+        for j in i.split():
+            lis.append(j)
+             
+    # Calculating frequency of all words
+    freq = Counter(lis)
+     
+    # find max count and print that key
+    max = 0
+    for i in freq:
+        if(freq[i] > max):
+            max = freq[i]
+            word = i
+            return word
+ 
