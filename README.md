@@ -20,7 +20,7 @@ To contribute, please check out our contribution guide [here](CONTRIBUTING.md).
   - [Linear Search](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Searching/LinearSearch.py)
   - [Binary Search](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Searching/binarySearch.py)
   - [Merge Sort](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Sorting/MergeSort.py)
-  - [Quick Sort](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Sorting/quickSort.py)
+  - [Quick Sort](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Sorting/quicksort.py)
   - [Radix Sort](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Sorting/RadixSort.py)
   - [Sorting](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Sorting/sorting.py)
   - [Insertion Sort](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Sorting/InsertionSort.py)
@@ -44,7 +44,7 @@ To contribute, please check out our contribution guide [here](CONTRIBUTING.md).
   - [Execution Time Utility](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Utils/Execution-time-utility)
   - [Instagram Bot](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Bots/InstaGramBot)
   - [Python Telegram Bot](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Bots/Python-Telegram-bot)
-  - [Quadratic Equation](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/DSA/Quadratic%20equation)
+  - [Quadratic Equation](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/DSA/Mathematical/Quadratic%20equation)
   - [Telegram Echo Bot](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Bots/TelegramEchoBot)
   - [Web Scraping](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Web-Scraping)
   - [WhatsApp-message-Automation](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Bots/WhatsApp-message-automation)
@@ -62,8 +62,8 @@ To contribute, please check out our contribution guide [here](CONTRIBUTING.md).
   - [Guess The Number](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/Games/Guess_the_number.py)
   - [Pacman Game](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Games/Pacman%20Game%20%28GUI%29)
   - [Tic Tac Toe Game](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Games/TicTacToeGame)
-  - [Hangman](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/Games/hangman.py)
   - [Roll A Dice](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/Games/Roll%20a%20Dice.py)
+  - [Hangman](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/Games/hangman.py)
   
 ## How to Contribute
 
