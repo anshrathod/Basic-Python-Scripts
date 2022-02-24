@@ -62,8 +62,8 @@ To contribute, please check out our contribution guide [here](CONTRIBUTING.md).
   - [Guess The Number](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/Games/Guess_the_number.py)
   - [Pacman Game](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Games/Pacman%20Game%20%28GUI%29)
   - [Tic Tac Toe Game](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Games/TicTacToeGame)
-  - [Roll A Dice](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/Games/Roll%20a%20Dice.py)
   - [Hangman](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/Games/hangman.py)
+  - [Roll A Dice](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/Games/Roll%20a%20Dice.py)
   
 ## How to Contribute
 
