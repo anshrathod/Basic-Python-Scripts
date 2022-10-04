@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.4%;
+        }
+
+        .row {
+            display: flex;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: bold;
+            padding: 2rem 0;
+        }
+
+        .heading span {
+            display: block;
+            font-size: 2rem;
+        }
+
+        .container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .max-width {
+            width: 70%;
+        }
+
+        .col {
+            width: 100%;
+            padding: 2rem 0.5rem;
+        }
+
+        .col span {
+            font-size: 2rem;
+            font-family: "Open Sans"
+        }
+
+        .formField {
+            width: 100%;
+            height: 4rem;
+            font-size: 1.8rem;
+            border: 1px solid cadetblue;
+        }
+
+        .form {
+            margin-top: 4rem;
+        }
+
+        .submit {
+            padding: 2rem 4rem;
+            font-size: 2rem;
+            font-family: "Open Sans";
+            background: transparent;
+            border: 1px solid blue;
+            transition: all 200ms ease
+        }
+
+        .submit:hover {
+            background: dodgerblue;
+            color: #ffffff;
+        }
+
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 200ms ease-in-out;
+        }
+
+        .loader .max-width {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            backdrop-filter: brightness(0.8);
+        }
+
+        .cicle {
+            width: 8rem;
+            height: 8rem;
+            border: 1rem dashed #2b7079;
+            border-radius: 50%;
+            animation: rotate infinite linear;
+        }
+
+        .result {
+            float: right;
+            font-size: 2rem;
+            font-weight: 600;
+            font-family: "Open Sans";
+        }
+
+        @keyframes rotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="max-width">
+        <div class="heading">Want to know if survival survive in titanic
+            <span>(to know fill following details)</span>
+        </div>
+        <form class="form" method="post">
+            <div class="row">
+                <div class="col">
+                    <span>Enter Your PClass</span>
+                    <select name="pclass" id="pclass" class="formField">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <span>Enter Your Age</span>
+                    <input type="number" class="formField" id="age" value="1">
+                </div>
+
+
+            </div>
+            <div class="row">
+
+                <div class="col">
+                    <span>Enter Your SibSp(0 Or 1)</span>
+                    <select name="sibsp" id="sibsp" class="formField">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <span>Enter Your Parch</span>
+                    <select name="parch" id="parch" class="formField">
+                        <option value="0">0</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <span>Enter Your Fare</span>
+                    <input type="number" class="formField" id="fare" min=0 max=250 value="0">
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <span>Enter Your Gender</span>
+                    <select name="gender" id="gender" class="formField">
+                        <option value="0">Male</option>
+                        <option value="1">Female</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <span>Enter Your Q</span>
+                    <select name="q" id="q" class="formField">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+                <div class="col">
+                    <span>Enter Your S</span>
+                    <select name="s" id="s" class="formField">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                    </select>
+                </div>
+            </div>
+            <input type="button" class="submit" value="Submit">
+            <div class="result" id="result">
+                <span></span>
+            </div>
+        </form>
+        <div class="loader" style="display: none">
+            <div class="max-width">
+                <div class="cicle"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+
+    $(".submit").click(async function () {
+        $('#result').val('');
+        $('.loader').css('display', 'block');
+        $pclass = $('#pclass').val();
+        $age = $('#age').val();
+        $sibsp = $('#sibsp').val();
+        $parch = $('#parch').val();
+        $fare = $('#fare').val();
+        $male = $('#gender').val();
+        $q = $('#q').val();
+        $s1 = $('#s').val();
+        await $.post("/titanic",
+            {
+                pclass: $pclass,
+                age: $age,
+                sibsp: $sibsp,
+                parch: $parch,
+                fare: $fare,
+                male: $male,
+                q: $q,
+                s: $s1,
+            },
+            function (data, status) {
+                $('.loader').css('display', 'none')
+                if (data['status'] == 0) {
+                    document.getElementById('result').innerText = "Survival couldn't survived"
+                } else {
+                    document.getElementById('result').innerText = "Congratulations Survival Survived"
+                }
+            }
+        )
+    });
+</script>
+</body>
+</html>
