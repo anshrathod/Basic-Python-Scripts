@@ -1,7 +1,15 @@
 import random
 import sys
+import urllib.request
 
-listword=["hello","computer","python","java","html","world","apple","windows"]
+def get_wordlist():
+	word_url = "https://www.mit.edu/~ecprice/wordlist.10000"
+	response = urllib.request.urlopen(word_url)
+	long_txt = response.read().decode()
+	words_list = long_txt.splitlines()
+	return words_list
+
+listword = get_wordlist()
 
 guessword=[]
 random_word=random.choice(listword)
