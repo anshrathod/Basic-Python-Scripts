@@ -9,8 +9,7 @@ def menu():
     print("-"*50)
 def choices():
     compOps=["Rock","Paper","Scissors"]
-    #x=random.randint(0,2)
-    x=1
+    x=random.randint(0,2)
     i=int(input("Enter your choice {1,2,3}: "))
     print("The computer chose: ",x+1," = ",compOps[x])
     l=[x+1,i]
@@ -35,4 +34,5 @@ def main():
             continue
         else:
             ch=False
+            print("Goodbye!")
 main()
