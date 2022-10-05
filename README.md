@@ -53,6 +53,7 @@ To contribute, please check out our contribution guide [here](CONTRIBUTING.md).
   - [Pychat](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Web/pychat)
   - [AI Cancer Module](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/AI-ML/A.I_cancer_module.py)
   - [Arithmetic Calculator](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Mathematical/Arithmetic_calculator.py)
+  - [Natural Languagr Processing (NLP)](https://github.com/Sk70249/Basic-Python-Scripts/blob/master/AI-ML/natural_language_processing.py)
  
 **Games**
   - [Snake Game](https://github.com/anshrathod/Basic-Python-Scripts/tree/master/Games/SnakeGame)
