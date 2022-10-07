@@ -17,13 +17,16 @@ To contribute, please check out our contribution guide [here](CONTRIBUTING.md).
 ## Content
 
 **Sorting Algorithms**
-  - [Linear Search](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Searching/LinearSearch.py)
-  - [Binary Search](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Searching/binarySearch.py)
   - [Merge Sort](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Sorting/MergeSort.py)
   - [Quick Sort](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Sorting/quicksort.py)
   - [Radix Sort](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Sorting/RadixSort.py)
   - [Sorting](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Sorting/sorting.py)
   - [Insertion Sort](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Sorting/InsertionSort.py)
+  - [Bubble sort](https://github.com/Abdulwahid7027/Basic-Python-Scripts/blob/master/DSA/Sorting/BubbleSort.py)
+  
+**Searching Algorithms**
+  - [Linear Search](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Searching/LinearSearch.py)
+  - [Binary Search](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Searching/binarySearch.py)
 
 **Basic Python Scripts**
   - [Compund](https://github.com/anshrathod/Basic-Python-Scripts/blob/master/DSA/Mathematical/compund.py)
